@@ -1,24 +1,6 @@
-# README
+# README for Rails Messaging API service with Rspec Tests-
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## This is a working repository testing API builds and rspec testing
 
-Things you may want to cover:
+More information to follow: 10-6-18
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
