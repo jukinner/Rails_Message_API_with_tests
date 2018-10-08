@@ -1,19 +1,19 @@
 class NotificationsController < ApplicationController
-  respond_to :json
+  # respond_to :json
 
   def index
+    render plain: 'ok'
   end
 
   def create
-    @notification = Notification.create(notification_params)
+    @notification = Notification.new(notification_params)
 
     respond_to do |format|
       if @notification.save
-        format.json { render json: @notificaton, action: 'show', status: :created } 
+        format.json { render json: @notification, action: 'show', status: :created } 
       else
-        format.json { render json: @notificaton.errors, status: :unprocessable_entity } 
-      end
-        
+        format.json { render json: @notification.errors, status: :unprocessable_entity } 
+      end 
     end
   end
 
@@ -28,7 +28,7 @@ class NotificationsController < ApplicationController
 
   private
 
-    def notification_params
-      params.require(:notification).permit(:phone, :body, :source_app)
-    end
+  def notification_params
+    params.require(:notification).permit(:phone, :body, :source_app)
+  end
 end
