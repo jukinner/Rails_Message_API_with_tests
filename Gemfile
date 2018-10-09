@@ -45,3 +45,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'dotenv-rails', '~> 2.5', :groups => [:development, :test]
+gem 'twilio-ruby', '~> 5.14', '>= 5.14.1'
