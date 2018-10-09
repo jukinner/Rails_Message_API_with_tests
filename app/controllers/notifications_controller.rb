@@ -1,5 +1,4 @@
 class NotificationsController < ApplicationController
-  # respond_to :json
 
   def index
     render plain: 'ok'
