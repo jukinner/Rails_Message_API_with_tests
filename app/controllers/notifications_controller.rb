@@ -19,6 +19,8 @@ class NotificationsController < ApplicationController
   end
 
   def show
+    @notification = Notification.find(params[:id])
+    render json: @notification
   end
 
   def update
