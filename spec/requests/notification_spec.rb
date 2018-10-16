@@ -24,7 +24,7 @@ RSpec.describe Notification, type: :request  do
     expect(response).to have_http_status(:created)
   end
 
-  it "creates a Notification" do 
+  it "renders an error message if the notification was not created" do 
     headers = { "CONTENT_TYPE" => "application/json" }
     post "/notifications",
     :params => {

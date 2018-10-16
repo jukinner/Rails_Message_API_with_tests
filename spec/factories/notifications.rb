@@ -6,8 +6,13 @@ FactoryBot.define do
   end
 
   factory :second_notification, class: 'Notification' do
-    phone { "8568568568" }
-    body { "My 2nd message" }
+    phone { "4444444444" }
+    body { "Another Notification" }
     source_app { "some_app x2" }
+  end
+    factory :outside_notification, class: 'Notification' do
+    phone { "3333333333" }
+    body { "Third Notification" }
+    source_app { "some_app x3" }
   end
 end
