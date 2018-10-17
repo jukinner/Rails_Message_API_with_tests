@@ -10,6 +10,7 @@ FactoryBot.define do
     body { "Another Notification" }
     source_app { "some_app x2" }
   end
+  
     factory :outside_notification, class: 'Notification' do
     phone { "3333333333" }
     body { "Third Notification" }
