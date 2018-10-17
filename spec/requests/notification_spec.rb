@@ -1,9 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Notification, type: :request  do 
-  before(:each) do
-    @client = FactoryBot.build_stubbed(:client)
-  end
 
   it 'returns ok and a 200' do
     get notifications_path
@@ -12,7 +9,8 @@ RSpec.describe Notification, type: :request  do
   end
 
   it "creates a Notification" do 
-
+    client = FactoryBot.create(:client)
+    
     post "/notifications",
     :params => {
       notification: {
