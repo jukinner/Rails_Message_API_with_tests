@@ -1,6 +1,8 @@
 class NotificationsController < ApplicationController
   include SmsTool 
 
+  before_action :authenticate
+
   def index
     render plain: 'ok'
   end
@@ -33,5 +35,12 @@ class NotificationsController < ApplicationController
 
   def notification_params
     params.require(:notification).permit(:phone, :body, :source_app)
+  end
+
+  def authenticate
+    self.authenticate_or_request_with_http_basic do |source_app, api_key|
+      client = Client.find_by_source_app(source_app)
+      client && client.api_key == api_key
+    end
   end
 end
