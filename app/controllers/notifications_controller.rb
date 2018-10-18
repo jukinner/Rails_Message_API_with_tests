@@ -25,12 +25,6 @@ class NotificationsController < ApplicationController
     render json: @notification
   end
 
-  def update
-  end
-
-  def destroy
-  end
-
   private
 
   def notification_params
